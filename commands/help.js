@@ -8,7 +8,7 @@ module.exports = {
         if (args[0] === "server") {
             message.reply("Work in progress...");
         }
-        else if (args[1] === "bot") {
+        else if (args[0] === "bot") {
             message.reply("Work in progress...");
         }
     }
