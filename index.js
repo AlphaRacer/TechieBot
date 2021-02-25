@@ -1,7 +1,10 @@
+const fs = require('fs');
 const Discord = require('discord.js');
 const client = new Discord.Client();
+client.commands = new Discord.Collection();
 require('dotenv').config()
-const { prefix } = require('./config.json');
+const config = require('./config.json');
+const prefix = config.prefix;
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
 });
@@ -15,6 +18,8 @@ client.on('message', message => {
     if (!client.commands.has(commandName)) return;
 
     const command = client.commands.get(commandName);
+
+    const commandFolders = fs.readdirSync('./commands');
 
     for (const folder of commandFolders) {
         const commandFiles = fs.readdirSync(`./commands/${folder}`).filter(file => file.endsWith('.js'));
