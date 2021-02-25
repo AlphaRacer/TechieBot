@@ -3,9 +3,8 @@ module.exports = {
     description: 'verify command',
     execute(message, args) {
         try {
-        message.member.roles.add('814434340452827216').then(() => {
             message.channel.send(`${message.author.tag} has verified!`);
-        })
+            message.member.roles.add('814434340452827216');
         }
         catch (error) {
             console.error(error);
