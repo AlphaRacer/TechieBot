@@ -29,7 +29,7 @@ client.on('message', message => {
 		client.commands.get(command).execute(message, args);
 	} catch (error) {
 		console.error(error);
-		message.reply('there was an error trying to execute that command!');
+		message.reply('There was an error trying to execute that command! Let AlphaRacer know about this, so he can fix the command!');
 	}
 
 });
