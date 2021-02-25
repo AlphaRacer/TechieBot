@@ -19,7 +19,7 @@ client.on('message', message => {
 
     const command = client.commands.get(commandName);
 
-    const commandFolders = fs.readdirSync('./commands');
+    const commandFolders = fs.readdirSync('./commands').filter((file) => file.endsWith('.js'));
 
     for (const folder of commandFolders) {
         const commandFiles = fs.readdirSync(`./commands/${folder}`).filter(file => file.endsWith('.js'));
