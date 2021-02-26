@@ -1,4 +1,5 @@
 const fs = require('fs');
+const keep_alive = require('./keep_alive.js');
 const Discord = require('discord.js');
 const client = new Discord.Client();
 client.commands = new Discord.Collection();

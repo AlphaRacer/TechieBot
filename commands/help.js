@@ -2,6 +2,7 @@ module.exports = {
     name: 'help',
     description: 'help command',
     execute(message, args) {
+        const Discord = require('discord.js');
         if (!args[0]) {
             message.channel.send("Please specify the topic on which you want help.\n\nDo `!help server` for help with the server, do `!help bot` for help with the bot.");
         }
