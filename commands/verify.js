@@ -11,6 +11,7 @@ module.exports = {
 				message.reply('You are already verified!');
 			}
 			else {
+				message.delete();
 				message.member.roles.add('814434340452827216');
 				message.client.channels.cache.get('814459282288279552').send(`${message.author}, welcome to the server!`);
 			}
