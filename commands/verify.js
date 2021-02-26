@@ -4,7 +4,7 @@ module.exports = {
 	// eslint-disable-next-line no-unused-vars
 	execute(message, args) {
 		try {
-			if (message.guild.member.roles.cache.has('814713329746444338')) {
+			if (message.member.roles.cache.has('814713329746444338')) {
 				message.reply('Nice try, you can\'t bypass mutes by doing this!');
 			}
 			else {
