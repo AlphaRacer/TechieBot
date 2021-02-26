@@ -7,6 +7,9 @@ module.exports = {
 			if (message.member.roles.cache.has('814713329746444338')) {
 				message.reply('Nice try, you can\'t bypass mutes by doing this!');
 			}
+			else if (message.member.roles.cache.has('814434340452827216')) {
+				message.reply('You are already verified!');
+			}
 			else {
 				message.member.roles.add('814434340452827216');
 				message.client.channels.cache.get('814459282288279552').send(`${message.author}, welcome to the server!`);
