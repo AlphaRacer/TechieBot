@@ -34,7 +34,8 @@ module.exports = {
 				.setTitle('Bot Commands:')
 				.addField('`!verify`', 'If you don\'t have the Members role, do this to verify yourself and get it')
 				.addField('`!help`', 'Get help with the server or bot.')
-				.addField('`!ping`', 'Check the bot latency and API latency');
+				.addField('`!ping`', 'Check the bot latency and API latency')
+				.addField('`!pack`', 'Use or get info about a service (pack)');
 			message.channel.send(botHelpEmbed);
 		}
 	},
