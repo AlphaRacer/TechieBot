@@ -1,6 +1,6 @@
 module.exports = {
-	name: 'supportchannel',
-	description: 'supportchannel command',
+	name: 'support',
+	description: 'support command',
 	execute(message, args) {
 		const Discord = require('discord.js');
 		const config = require('../config.json');
@@ -30,7 +30,6 @@ module.exports = {
 							.setTimestamp()
 							.setColor('#ff0033');
 						message.channel.send(`<@${userToMentionTo}> :arrow_down:`, closedEmbed);
-						// message.channel.send(closedEmbed);
 					}
 					else {
 						const closedEmbed = new Discord.MessageEmbed()
@@ -42,6 +41,22 @@ module.exports = {
 					}
 					break;
 				}
+				case 'tempvc':
+					if (args[1] && args[1].length == 18) {
+						message.guild.channels.create('Temp Support VC', {
+							type: 'voice',
+							permissionOverwrites: [
+								{
+									id: message.author.id,
+									allow: ['VIEW_CHANNEL', 'CONNECT', 'STREAM'],
+								},
+								{
+									id: args[1],
+									allow: ['VIEW_CHANNEL', 'CONNECT', 'STREAM'],
+								},
+							],
+						});
+					}
 				}
 			}
 		}
