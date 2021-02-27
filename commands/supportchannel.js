@@ -22,7 +22,7 @@ module.exports = {
 					break;
 				}
 				case 'inuse': {
-					if (args && args.length == 18) {
+					if (args[1] && args[1].length == 18) {
 						const userToMentionTo = args[1];
 						const closedEmbed = new Discord.MessageEmbed()
 							.setTitle(':negative_squared_cross_mark: | Support Channel In Use')
