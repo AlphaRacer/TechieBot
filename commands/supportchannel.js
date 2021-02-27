@@ -16,6 +16,7 @@ module.exports = {
 					const openEmbed = new Discord.MessageEmbed()
 						.setTitle(':white_check_mark: | Support Channel Open')
 						.setDescription('You can ask <@568066367518015506>, <@772484468396130325> or <@533259452439330817> for any tech help now!')
+						.setTimestamp()
 						.setColor('#4BB543');
 					message.channel.send(openEmbed);
 					break;
@@ -24,6 +25,7 @@ module.exports = {
 					const closedEmbed = new Discord.MessageEmbed()
 						.setTitle(':negative_squared_cross_mark: | Support Channel In Use')
 						.setDescription('The Support Channel is currently being used, please wait until it is open again!')
+						.setTimestamp()
 						.setColor('#ff0033');
 					message.channel.send(closedEmbed);
 					break;
