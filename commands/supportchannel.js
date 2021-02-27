@@ -7,6 +7,7 @@ module.exports = {
 			message.reply('You haven\'t provided any arguments! Usable arguments: `open` or `inuse`.');
 		}
 		else {
+			message.delete();
 			switch(args[0]) {
 			case 'open': {
 				const openEmbed = new Discord.MessageEmbed()
