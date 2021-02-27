@@ -29,8 +29,8 @@ module.exports = {
 							.setDescription('The Support Channel is currently being used, please wait until it is open again!')
 							.setTimestamp()
 							.setColor('#ff0033');
-						message.channel.send(`<@${userToMentionTo}>, :arrow_down:`);
-						message.channel.send(closedEmbed);
+						message.channel.send(`<@${userToMentionTo}> :arrow_down:`, closedEmbed);
+						// message.channel.send(closedEmbed);
 					}
 					else {
 						const closedEmbed = new Discord.MessageEmbed()
