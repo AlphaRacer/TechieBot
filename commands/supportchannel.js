@@ -22,11 +22,13 @@ module.exports = {
 					break;
 				}
 				case 'inuse': {
+					const userToMentionTo = args[1];
 					const closedEmbed = new Discord.MessageEmbed()
 						.setTitle(':negative_squared_cross_mark: | Support Channel In Use')
 						.setDescription('The Support Channel is currently being used, please wait until it is open again!')
 						.setTimestamp()
 						.setColor('#ff0033');
+					message.channel.send(`<@${userToMentionTo}>, :arrow_down:`);
 					message.channel.send(closedEmbed);
 					break;
 				}
