@@ -59,7 +59,7 @@ module.exports = {
 									deny: ['SPEAK'],
 								},
 							],
-						}).then(() => {
+						}).then(async () => {
 							const inviteLink = await message.channel.createInvite();
 							const screenshareEmbed = new Discord.MessageEmbed()
 								.setTitle(':white_check_mark: | Screen Sharing VC Created')
