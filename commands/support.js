@@ -43,8 +43,9 @@ module.exports = {
 				}
 				case 'tempvc':
 					if (args[1] && args[1].length == 18) {
-						message.guild.channels.create('Temp Support VC', {
+						message.guild.channels.create(`ScreenShare ${await message.client.users.fetch(args[1]).tag}`, {
 							type: 'voice',
+							parent: '814459273354412043',
 							permissionOverwrites: [
 								{
 									id: message.author.id,
