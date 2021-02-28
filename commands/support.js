@@ -1,7 +1,7 @@
 module.exports = {
 	name: 'support',
 	description: 'support command',
-	execute(message, args) {
+	async execute(message, args) {
 		const Discord = require('discord.js');
 		const config = require('../config.json');
 		const whitelist = config.whitelist;
@@ -51,7 +51,7 @@ module.exports = {
 									allow: ['VIEW_CHANNEL', 'CONNECT', 'STREAM'],
 								},
 								{
-									id: message.client.users.fetch(args[1]),
+									id: await message.client.users.fetch(args[1]),
 									allow: ['VIEW_CHANNEL', 'CONNECT', 'STREAM'],
 								},
 							],
