@@ -42,8 +42,9 @@ module.exports = {
 					break;
 				}
 				case 'tempvc':
+					console.log(await message.client.users.fetch(args[1]));
 					if (args[1] && args[1].length == 18) {
-						message.guild.channels.create(`ScreenShare: ${await message.client.users.fetch(args[1])[0].username}${await message.client.users.fetch(args[1])[0].discriminator}`, {
+						message.guild.channels.create('ScreenShare:', {
 							type: 'voice',
 							parent: '814459273354412043',
 							permissionOverwrites: [
