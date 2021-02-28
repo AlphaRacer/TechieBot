@@ -44,7 +44,7 @@ module.exports = {
 				case 'screenshare': {
 					if (args[1] && args[1].length == 18) {
 						const info = await message.client.users.fetch(args[1]);
-						const vc = message.guild.channels.create(`Screen Share: ${info.username}`, {
+						const vc = await message.guild.channels.create(`Screen Share: ${info.username}`, {
 							type: 'voice',
 							parent: '814459273354412043',
 							permissionOverwrites: [
