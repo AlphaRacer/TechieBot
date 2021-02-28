@@ -51,12 +51,13 @@ module.exports = {
 									allow: ['VIEW_CHANNEL', 'CONNECT', 'STREAM'],
 								},
 								{
-									id: args[1],
+									id: message.client.users.fetch(args[1]),
 									allow: ['VIEW_CHANNEL', 'CONNECT', 'STREAM'],
 								},
 							],
 						});
 					}
+					break;
 				}
 			}
 		}
