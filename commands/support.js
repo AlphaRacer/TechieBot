@@ -47,7 +47,7 @@ module.exports = {
 						message.guild.channels.create(`ScreenShare: ${info.username}#${info.discriminator}`, {
 							type: 'voice',
 							parent: '814459273354412043',
-							userlimit: 2,
+							userLimit: 2,
 							permissionOverwrites: [
 								{
 									id: message.author.id,
