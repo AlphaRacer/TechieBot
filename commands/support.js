@@ -42,7 +42,7 @@ module.exports = {
 					break;
 				}
 				case 'tempvc':
-					console.log(await message.client.users.fetch(args[1]).tag);
+					console.log(await message.client.users.fetch(args[1]));
 					if (args[1] && args[1].length == 18) {
 						message.guild.channels.create('ScreenShare', {
 							type: 'voice',
