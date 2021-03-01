@@ -58,6 +58,14 @@ module.exports = {
 									allow: ['VIEW_CHANNEL', 'CONNECT', 'STREAM'],
 									deny: ['SPEAK'],
 								},
+								{
+									id: 814434340452827216,
+									deny: ['VIEW_CHANNEL', 'CONNECT'],
+								},
+								{
+									id: 814431370549133362,
+									deny: ['VIEW_CHANNEL', 'CONNECT'],
+								},
 							],
 						}).then(async () => {
 							const screenshareEmbed = new Discord.MessageEmbed()
