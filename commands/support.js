@@ -44,7 +44,7 @@ module.exports = {
 				case 'screenshare': {
 					if (args[1] && args[1].length == 18) {
 						const info = await message.client.users.fetch(args[1]);
-						const vc = await message.guild.channels.create(`Screen Share: ${info.username}`, {
+						await message.guild.channels.create(`Screen Share: ${info.username}`, {
 							type: 'voice',
 							parent: '814459273354412043',
 							permissionOverwrites: [
@@ -60,13 +60,11 @@ module.exports = {
 								},
 							],
 						}).then(async () => {
-							const invitelink = await vc.createInvite();
-							message.channel.send(invitelink);
-							// const inviteLink = await message.channel.createInvite();
-							// const screenshareEmbed = new Discord.MessageEmbed()
-							// 	.setTitle(':white_check_mark: | Screen Sharing VC Created')
-							// 	.setDescription(`Click >> [HERE](${inviteLink} "Share Screen") << to join the Voice Channel to share your screen`);
-							// message.channel.send(`<@${args[1]}>`, screenshareEmbed);
+							const screenshareEmbed = new Discord.MessageEmbed()
+								.setTitle(':white_check_mark: | Screen Sharing VC Created')
+								.setDescription('A Voice Channel for sharing your screen has been created at the bottom of the "Support" category. Please join the VC and share your screen over there.')
+								.setColor('#4BB543');
+							message.channel.send(`<@${args[1]}> & <@${message.author.id}>`, screenshareEmbed);
 						});
 					}
 					break;
