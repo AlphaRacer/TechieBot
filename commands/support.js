@@ -62,7 +62,7 @@ module.exports = {
 						}).then(async () => {
 							const screenshareEmbed = new Discord.MessageEmbed()
 								.setTitle(':white_check_mark: | Screen Sharing VC Created')
-								.setDescription('A Voice Channel for sharing your screen has been created at the bottom of the "Support" category. Please join the VC and share your screen over there.')
+								.setDescription(`A Voice Channel for sharing your screen called "Screen Share: ${info.username}" has been created at the bottom of the "Support" category. Please join the VC and share your screen over there.`)
 								.setColor('#4BB543');
 							message.channel.send(`<@${args[1]}> & <@${message.author.id}>`, screenshareEmbed);
 						});
