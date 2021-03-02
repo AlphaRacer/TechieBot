@@ -15,7 +15,7 @@ module.exports = {
 				case 'open': {
 					const openEmbed = new Discord.MessageEmbed()
 						.setTitle(':white_check_mark: | Support Channel Open')
-						.setDescription('You can ask <@568066367518015506>, <@772484468396130325> or <@533259452439330817> for any tech help now!')
+						.setDescription('You can ask <@568066367518015506> or <@772484468396130325> for any tech help now!')
 						.setTimestamp()
 						.setColor('#4BB543');
 					message.channel.send(openEmbed);

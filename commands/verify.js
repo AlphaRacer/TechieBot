@@ -4,16 +4,16 @@ module.exports = {
 	// eslint-disable-next-line no-unused-vars
 	execute(message, args) {
 		try {
-			if (message.member.roles.cache.has('814713329746444338')) {
+			if (message.member.roles.cache.has('816184186141802528')) {
 				message.reply('Nice try, you can\'t bypass mutes by doing this!');
 			}
-			else if (message.member.roles.cache.has('814434340452827216')) {
+			else if (message.member.roles.cache.has('816184184804474890')) {
 				message.reply('You are already verified!');
 			}
 			else {
 				message.delete();
-				message.member.roles.add('814434340452827216');
-				message.client.channels.cache.get('814459282288279552').send(`${message.author}, welcome to the server!`);
+				message.member.roles.add('816184184804474890');
+				message.client.channels.cache.get('816184205431275562').send(`${message.author}, welcome to the server!`);
 			}
 		}
 		catch (error) {
