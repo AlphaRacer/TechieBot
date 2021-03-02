@@ -13,6 +13,7 @@ module.exports = {
 				message.delete();
 				switch(args[0]) {
 				case 'open': {
+                    message.channel.bulkDelete(100);
 					const openEmbed = new Discord.MessageEmbed()
 						.setTitle(':white_check_mark: | Support Channel Open')
 						.setDescription('You can ask <@568066367518015506> or <@772484468396130325> for any tech help now!')
