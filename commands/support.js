@@ -13,7 +13,7 @@ module.exports = {
 				message.delete();
 				switch(args[0]) {
 				case 'open': {
-                    message.channel.bulkDelete(100);
+					message.channel.bulkDelete(100);
 					const openEmbed = new Discord.MessageEmbed()
 						.setTitle(':white_check_mark: | Support Channel Open')
 						.setDescription('You can ask <@568066367518015506> or <@772484468396130325> for any tech help now!')
@@ -47,7 +47,7 @@ module.exports = {
 						const info = await message.client.users.fetch(args[1]);
 						await message.guild.channels.create(`Screen Share: ${info.username}`, {
 							type: 'voice',
-							parent: '814459273354412043',
+							parent: '816184193993408532',
 							permissionOverwrites: [
 								{
 									id: message.author.id,

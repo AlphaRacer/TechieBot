@@ -22,10 +22,10 @@ module.exports = {
 				message.channel.send(serverHelpEmbed);
 			}
 			else if (args[1] === '1') {
-				message.reply('Ask your tech question in <#814459285546991676>.');
+				message.reply('Ask your tech question in <#816184208614621184>.');
 			}
 			else if (args[1] === '2') {
-				message.reply('Get general tech support in <#814459286460563496> or <#814459287308992532>.');
+				message.reply('Get general tech support in <#816184209214930986> or <#816184209923506227>.');
 			}
 		}
 		else if (args[0] === 'bot') {
