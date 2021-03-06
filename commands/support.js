@@ -55,16 +55,16 @@ module.exports = {
 									deny: ['SPEAK'],
 								},
 								{
-									id: await message.client.users.fetch("568066367518015506"),
+									id: await message.client.users.fetch(args[1]),
 									allow: ['VIEW_CHANNEL', 'CONNECT', 'STREAM'],
 									deny: ['SPEAK'],
 								},
 								{
-									id: '814434340452827216',
+									id: '816184184804474890',
 									deny: ['VIEW_CHANNEL', 'CONNECT'],
 								},
 								{
-									id: '814431370549133362',
+									id: '816182863933210654',
 									deny: ['VIEW_CHANNEL', 'CONNECT'],
 								},
 							],
