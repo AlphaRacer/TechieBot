@@ -44,8 +44,7 @@ module.exports = {
 				}
 				case 'screenshare': {
 					if (args[1] && args[1].length == 18) {
-						console.log(args[1]);
-						const info = args[1];
+						const info = await message.client.users.fetch(args[1]);
 						await message.guild.channels.create(`Screen Share: ${info.username}`, {
 							type: 'voice',
 							parent: '816184193993408532',
@@ -56,7 +55,7 @@ module.exports = {
 									deny: ['SPEAK'],
 								},
 								{
-									id: await message.client.users.fetch(args[1]),
+									id: args[1],
 									allow: ['VIEW_CHANNEL', 'CONNECT', 'STREAM'],
 									deny: ['SPEAK'],
 								},
